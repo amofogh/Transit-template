@@ -1,0 +1,39 @@
+// // variables mixin reset-class
+
+$color-white: #fff;
+$color-gray: #858585;
+$color-graylight: #f5f5f5;
+$color-dark: #383B43;
+$color-skyblue: #3cadd4;
+
+$transform-35ms:transform .35s ease-in-out;
+$rotate-0:rotate(0deg);
+
+@font-face{
+    font-family: "myfont";
+    src: url(/Fonts/Raleway-Regular.ttf),
+        url(/Fonts/Raleway-Regular.otf) format(otf);
+}
+
+body{
+    font-family: "myfont";
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Helvetica, sans-serif;
+}
+
+@mixin transition-3ms {
+    transition: color .3s ease;
+}
+
+@mixin transform-to-X($rotate-deg) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate($rotate-deg);
+    -moz-transform: rotate($rotate-deg);
+    -o-transform: rotate($rotate-deg);
+    transform: rotate($rotate-deg);
+    opacity: 0.9;
+}
